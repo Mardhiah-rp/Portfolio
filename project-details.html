@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Project Details • The Archive of Mardhiah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== HEADER / NAV ===== -->
+<header class="site-header">
+    <nav class="archive-navbar">
+        <ul class="nav-links left">
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+            <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+        </ul>
+
+        <a href="index.html">
+            <img src="img/waxlogo2.svg" alt="Mardhiah logo" class="nav-logo" />
+        </a>
+
+        <ul class="nav-links right">
+            <li><a href="projects.html" class="nav-link active">Projects</a></li>
+            <li><a href="index.html#events" class="nav-link">Events</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== PAGE WRAPPER ===== -->
+<main class="projects-page">
+    <div class="projects-page-inner container py-5">
+
+        <a href="projects.html" class="view-all-link mb-4 d-inline-block">
+            ← Back to Projects
+        </a>
+
+        <h1 id="projectTitle" class="mb-4"></h1>
+
+
+        <!-- Carousel -->
+        <div id="projectCarouselWrapper" class="mb-4"></div>
+
+        <p id="projectOverview" class="lead"></p>
+
+        <div class="row g-4 mt-3">
+            <div class="col-md-6">
+                <h2 class="h5">Language/Tools</h2>
+                <ul id="projectTools" class="list-group list-group-flush"></ul>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="h5">Features</h2>
+                <ul id="projectFeatures" class="list-group list-group-flush"></ul>
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex gap-2 flex-wrap" id="projectLinks"></div>
+
+        <div id="projectDemoWrapper" class="mb-4"></div>
+    </div>
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Data + logic -->
+<script src="projects.js"></script>
+<script src="project-details.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LinkedIn">
+  <!-- Rounded square background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="#7A0019"></rect>
+
+  <!-- "in" logo (white) -->
+  <!-- Left bar -->
+  <rect x="16.5" y="27" width="7" height="22" rx="3.5" fill="#F3E8DC"></rect>
+  <!-- Dot -->
+  <circle cx="20" cy="20" r="4" fill="#F3E8DC"></circle>
+
+  <!-- Right "in" + people bar -->
+  <path fill="#F3E8DC" d="
+    M30 27h6.6v3.1c1.1-1.9 3.8-3.8 8-3.8
+    c7.8 0 11.4 4.7 11.4 12.4V49h-7V39.5
+    c0-4.4-1.7-7-5.3-7c-3.2 0-5.1 2.1-5.9 4.2
+    c-.2.6-.3 1.4-.3 2.2V49h-7V27z"></path>
+</svg>
