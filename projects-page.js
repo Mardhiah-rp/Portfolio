@@ -1,5 +1,6 @@
 // projects-page.js
 // Renders projects into the 3 draggable rows (mobile/web/design)
+// Clicking a tile opens the internal project details page: project-details.html?id=#
 
 function getCategoryLabel(category) {
     if (category === "mobile") return "Mobile App";
@@ -8,27 +9,17 @@ function getCategoryLabel(category) {
 }
 
 function getTileClass(project) {
-    // Mobile projects are always phone tiles
     if (project.category === "mobile") return "project-tile--phone";
-
-    // Web projects are always wide tiles
     if (project.category === "web") return "project-tile--wide";
 
-    // Designs can be mixed: phone or wide
-    // If tile is not provided, default to wide
+    // Designs can be mixed: phone / wide / square
     if (project.category === "design") {
-        return project.tile === "phone" ? "project-tile--phone" : "project-tile--wide";
+        if (project.tile === "phone") return "project-tile--phone";
+        if (project.tile === "square") return "project-tile--square"; // only if you added square
+        return "project-tile--wide";
     }
 
     return "project-tile--wide";
-}
-
-function getBestLink(project) {
-    // Priority: live > figma > github > nothing
-    if (project.links?.live) return project.links.live;
-    if (project.links?.figma) return project.links.figma;
-    if (project.links?.github) return project.links.github;
-    return "";
 }
 
 function renderRow(rowEl, projects) {
@@ -37,10 +28,9 @@ function renderRow(rowEl, projects) {
     projects.forEach((project) => {
         const a = document.createElement("a");
         a.className = `project-tile ${getTileClass(project)}`;
-        a.href = getBestLink(project) || "#";
-        a.target = getBestLink(project) ? "_blank" : "_self";
-        a.rel = "noopener noreferrer";
-        a.setAttribute("data-title", project.title);
+
+        // ✅ INTERNAL DETAILS PAGE LINK
+        a.href = `project-details.html?id=${project.id}`;
 
         // image
         const img = document.createElement("img");

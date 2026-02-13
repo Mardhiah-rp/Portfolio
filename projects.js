@@ -222,7 +222,7 @@ const PROJECTS = [
         id: 8,
         title: "Marsonian Logo Set",
         category: "design",
-        tile: "wide", // ✅ design can be wide too
+        tile: "phone", // ✅ design can be wide too
         thumbnail: "img/typo.png",
         carouselImages: ["img/typo.png"],
         overview: "Branding logo explorations for my portfolio identity.",
@@ -239,7 +239,7 @@ const PROJECTS = [
         category: "design",
         tile: "wide", // ✅ THIS makes it show as web-style container, not phone
         thumbnail: "assets/projects/design/ca1d1.png",
-        demoVideo : "assets/projects/design/designdemo.mp4",
+        demoVideo : "assets/projects/design/demodesign2.mp4",
         carouselImages: ["assets/projects/design/ca1d1.png",
             "assets/projects/design/ca1d2.png",
             "assets/projects/design/ca1d3.png",
